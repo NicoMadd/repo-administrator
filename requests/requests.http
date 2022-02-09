@@ -1,0 +1,43 @@
+
+
+POST http://localhost:5500/git/clone HTTP/1.1
+content-type: application/json
+
+{
+    "repoUrl":"https://github.com/NicoMadd/Squiggle",
+    "repoName":"Squiggle"
+}
+
+###
+
+GET http://localhost:5500/git/delete/1 HTTP/1.1
+content-type: application/json
+
+###
+
+GET  http://localhost:5500/git/initialize HTTP/1.1
+content-type: application/json
+
+###
+
+POST http://localhost:5500/git/create HTTP/1.1
+content-type: application/json
+
+{
+    "url":"https://github.com/NicoMadd/Squiggle",
+    "name":"Squiggle",
+    "type":"repository",
+    "dependencies": [],
+    "description":"squiggleaaa",
+    "user":"NicoMadd"
+}
+
+###
+
+GET  http://localhost:5500/git/list HTTP/1.1
+content-type: application/json
+
+###
+
+GET  http://localhost:5500/git/initialize/1 HTTP/1.1
+content-type: application/json
